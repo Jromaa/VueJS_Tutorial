@@ -1,3 +1,4 @@
+/*** Declarative Rendering ***/
 var app = new Vue({
     el: '#app',
     data: {
@@ -11,6 +12,8 @@ var app2 = new Vue({
     message: 'You loaded this page on ' + new Date().toLocaleString()
   }
 });
+
+/*** Conditionals and Loops ***/
 
 var app3 = new Vue({
   el: '#app-3',
@@ -31,3 +34,24 @@ var app4 = new Vue({
   }
 });
 //app4.todos.push({ text: 'New item' });
+
+/*** Handling User Input ***/
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js',
+  },
+  methods: {
+    reverseMessage: function(){
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+});
+
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+});
